@@ -4,1817 +4,16 @@
 
 <head>
 
-  <base target="_top">
+  <base target="_top">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>Layanan Surat - Puskesmas Klampis Ngasem</title>
+  <title>Layanan Surat - Puskesmas Klampis Ngasem</title>
 
 
 
-  <style>
+  <link rel="stylesheet" href="./style.css?v=3">
 
-    *{
-
-      box-sizing:border-box;
-
-      -webkit-tap-highlight-color:transparent;
-
-    }
-
-
-
-    :root{
-
-      --ink:#14334a;
-
-      --muted:#6d8395;
-
-      --line:rgba(255,255,255,.48);
-
-      --shadow:0 24px 70px rgba(24,63,92,.16);
-
-      --radius:28px;
-
-      --sehat-1:#08a95b;
-
-      --sehat-2:#00753d;
-
-      --sehat-3:#44db8c;
-
-      --berobat-1:#ffc928;
-
-      --berobat-2:#f18f00;
-
-      --berobat-3:#ffe36e;
-
-      --blue-1:#0d82ff;
-
-      --blue-2:#1454c8;
-
-    }
-
-
-
-    html{
-
-      scroll-behavior:smooth;
-
-      background:#f2f8fb;
-
-    }
-
-
-
-    body{
-
-      margin:0;
-
-      min-height:100vh;
-
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;
-
-      color:var(--ink);
-
-      background:
-
-        radial-gradient(circle at 8% 8%, rgba(0,166,255,.20), transparent 24%),
-
-        radial-gradient(circle at 92% 18%, rgba(0,201,120,.17), transparent 26%),
-
-        radial-gradient(circle at 18% 90%, rgba(255,196,0,.13), transparent 25%),
-
-        linear-gradient(135deg,#edf8ff 0%,#f7fbff 50%,#eefbf7 100%);
-
-      overflow-x:hidden;
-
-    }
-
-
-
-    body::before,
-
-    body::after{
-
-      content:"";
-
-      position:fixed;
-
-      z-index:-1;
-
-      border-radius:50%;
-
-      filter:blur(1px);
-
-      pointer-events:none;
-
-    }
-
-
-
-    body::before{
-
-      width:230px;
-
-      height:230px;
-
-      left:-90px;
-
-      top:22%;
-
-      background:radial-gradient(circle,#1ab6ff 0%,rgba(26,182,255,.12) 55%,transparent 72%);
-
-      opacity:.6;
-
-    }
-
-
-
-    body::after{
-
-      width:260px;
-
-      height:260px;
-
-      right:-90px;
-
-      bottom:5%;
-
-      background:radial-gradient(circle,#21d27f 0%,rgba(33,210,127,.10) 58%,transparent 74%);
-
-      opacity:.55;
-
-    }
-
-
-
-    .container{
-
-      width:min(1160px,94%);
-
-      margin:0 auto;
-
-      padding:18px 0 42px;
-
-    }
-
-
-
-    /* ===== HEADER ===== */
-
-    header{
-
-      padding:8px 0 20px;
-
-    }
-
-
-
-    .brand{
-
-      display:flex;
-
-      align-items:center;
-
-      gap:14px;
-
-    }
-
-
-
-    .logo{
-
-      width:58px;
-
-      height:58px;
-
-      flex:0 0 58px;
-
-      border-radius:20px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      color:#fff;
-
-      font-size:31px;
-
-      font-weight:900;
-
-      background:
-
-        linear-gradient(145deg,#15a8ff 0%,#0c70dd 52%,#084db4 100%);
-
-      border:1px solid rgba(255,255,255,.70);
-
-      box-shadow:
-
-        inset 0 1px 0 rgba(255,255,255,.55),
-
-        0 15px 30px rgba(4,91,177,.22);
-
-      transform:perspective(600px) rotateX(3deg);
-
-    }
-
-
-
-    .brand-copy h1{
-
-      margin:0;
-
-      font-size:clamp(20px,3vw,27px);
-
-      letter-spacing:-.4px;
-
-      color:#143b55;
-
-    }
-
-
-
-    .brand-copy p{
-
-      margin:4px 0 0;
-
-      color:#7990a1;
-
-      font-size:13px;
-
-      font-weight:600;
-
-    }
-
-
-
-    /* ===== HERO ===== */
-
-    .hero{
-
-      position:relative;
-
-      overflow:hidden;
-
-      padding:26px;
-
-      margin-bottom:22px;
-
-      border-radius:32px;
-
-      background:
-
-        linear-gradient(135deg,rgba(255,255,255,.96),rgba(247,253,255,.82));
-
-      border:1px solid rgba(255,255,255,.95);
-
-      box-shadow:var(--shadow);
-
-      backdrop-filter:blur(12px);
-
-      -webkit-backdrop-filter:blur(12px);
-
-    }
-
-
-
-    .hero::before{
-
-      content:"";
-
-      position:absolute;
-
-      right:-90px;
-
-      top:-110px;
-
-      width:300px;
-
-      height:300px;
-
-      border-radius:50%;
-
-      background:radial-gradient(circle at 35% 35%,rgba(8,168,255,.18),rgba(8,168,255,.04) 58%,transparent 70%);
-
-    }
-
-
-
-    .hero-top{
-
-      position:relative;
-
-      z-index:2;
-
-      display:flex;
-
-      align-items:flex-end;
-
-      justify-content:space-between;
-
-      gap:15px;
-
-    }
-
-
-
-    .hero h2{
-
-      margin:0 0 6px;
-
-      font-size:clamp(26px,4vw,36px);
-
-      letter-spacing:-.8px;
-
-      color:#11384f;
-
-    }
-
-
-
-    .hero-description{
-
-      margin:0;
-
-      color:#6d8496;
-
-      line-height:1.65;
-
-      max-width:720px;
-
-      font-size:14px;
-
-    }
-
-
-
-    .hero-badge{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      gap:7px;
-
-      white-space:nowrap;
-
-      padding:10px 13px;
-
-      border-radius:999px;
-
-      background:rgba(18,132,255,.08);
-
-      border:1px solid rgba(18,132,255,.13);
-
-      color:#126fcb;
-
-      font-size:12px;
-
-      font-weight:800;
-
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.7);
-
-    }
-
-
-
-    .dot{
-
-      width:8px;
-
-      height:8px;
-
-      border-radius:50%;
-
-      background:#12b76a;
-
-      box-shadow:0 0 0 5px rgba(18,183,106,.12);
-
-    }
-
-
-
-    /* ===== SERVICE CARDS ===== */
-
-    .cards{
-
-      position:relative;
-
-      z-index:2;
-
-      display:grid;
-
-      grid-template-columns:repeat(2, minmax(0,1fr));
-
-      gap:18px;
-
-      margin-top:22px;
-
-    }
-
-
-
-    .card{
-
-      position:relative;
-
-      min-height:206px;
-
-      overflow:hidden;
-
-      cursor:pointer;
-
-      border-radius:28px;
-
-      padding:24px;
-
-      color:#fff;
-
-      border:1px solid rgba(255,255,255,.34);
-
-      box-shadow:
-
-        0 22px 48px rgba(14,64,98,.18),
-
-        inset 0 1px 0 rgba(255,255,255,.28);
-
-      transform:translateY(0) scale(1);
-
-      transition:
-
-        transform .22s ease,
-
-        box-shadow .22s ease,
-
-        filter .22s ease;
-
-      isolation:isolate;
-
-    }
-
-
-
-    .card::before{
-
-      content:"";
-
-      position:absolute;
-
-      inset:0;
-
-      z-index:-3;
-
-      background:
-
-        linear-gradient(145deg,rgba(255,255,255,.22),transparent 35%),
-
-        linear-gradient(320deg,rgba(0,0,0,.13),transparent 58%);
-
-    }
-
-
-
-    .card::after{
-
-      content:"";
-
-      position:absolute;
-
-      z-index:-2;
-
-      width:210px;
-
-      height:210px;
-
-      right:-90px;
-
-      top:-110px;
-
-      border-radius:50%;
-
-      background:radial-gradient(circle,rgba(255,255,255,.34) 0%,rgba(255,255,255,.09) 50%,transparent 72%);
-
-    }
-
-
-
-    .card:hover{
-
-      transform:translateY(-5px) scale(1.012);
-
-      box-shadow:
-
-        0 28px 64px rgba(14,64,98,.23),
-
-        inset 0 1px 0 rgba(255,255,255,.33);
-
-      filter:saturate(1.05);
-
-    }
-
-
-
-    .card:active{
-
-      transform:translateY(-1px) scale(.996);
-
-    }
-
-
-
-    .card.sehat{
-
-      background:
-
-        linear-gradient(145deg,var(--sehat-3) 0%,var(--sehat-1) 36%,var(--sehat-2) 100%);
-
-    }
-
-
-
-    .card.berobat{
-
-      background:
-
-        linear-gradient(145deg,var(--berobat-3) 0%,var(--berobat-1) 33%,var(--berobat-2) 100%);
-
-      color:#503600;
-
-    }
-
-
-
-    .icon-wrap{
-
-      width:58px;
-
-      height:58px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      margin-bottom:18px;
-
-      border-radius:19px;
-
-      background:rgba(255,255,255,.22);
-
-      border:1px solid rgba(255,255,255,.38);
-
-      box-shadow:
-
-        inset 0 2px 0 rgba(255,255,255,.36),
-
-        0 10px 24px rgba(0,0,0,.10);
-
-      backdrop-filter:blur(6px);
-
-      -webkit-backdrop-filter:blur(6px);
-
-      font-size:29px;
-
-    }
-
-
-
-    .card.berobat .icon-wrap{
-
-      background:rgba(255,255,255,.29);
-
-      border-color:rgba(255,255,255,.45);
-
-    }
-
-
-
-    .card h3{
-
-      margin:0 0 8px;
-
-      font-size:clamp(20px,2.6vw,27px);
-
-      line-height:1.1;
-
-      letter-spacing:-.45px;
-
-    }
-
-
-
-    .card p{
-
-      margin:0;
-
-      max-width:90%;
-
-      min-height:40px;
-
-      font-size:13px;
-
-      line-height:1.55;
-
-      color:rgba(255,255,255,.88);
-
-    }
-
-
-
-    .card.berobat p{
-
-      color:rgba(80,54,0,.78);
-
-    }
-
-
-
-    .card-action{
-
-      position:absolute;
-
-      right:20px;
-
-      bottom:18px;
-
-      width:46px;
-
-      height:46px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      border-radius:16px;
-
-      background:rgba(255,255,255,.20);
-
-      border:1px solid rgba(255,255,255,.30);
-
-      box-shadow:
-
-        inset 0 1px 0 rgba(255,255,255,.34),
-
-        0 9px 20px rgba(0,0,0,.10);
-
-      font-size:22px;
-
-      color:#fff;
-
-    }
-
-
-
-    .card.berobat .card-action{
-
-      background:rgba(255,255,255,.30);
-
-      border-color:rgba(255,255,255,.42);
-
-      color:#5f4100;
-
-    }
-
-
-
-    .mini-tag{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      margin-top:15px;
-
-      padding:7px 10px;
-
-      border-radius:999px;
-
-      background:rgba(255,255,255,.16);
-
-      border:1px solid rgba(255,255,255,.26);
-
-      font-size:11px;
-
-      font-weight:800;
-
-      color:#fff;
-
-    }
-
-
-
-    .card.berobat .mini-tag{
-
-      color:#624200;
-
-      background:rgba(255,255,255,.28);
-
-      border-color:rgba(255,255,255,.42);
-
-    }
-
-
-
-    /* ===== FORM ===== */
-
-    .form-area{
-
-      display:none;
-
-      position:relative;
-
-      overflow:hidden;
-
-      margin-top:22px;
-
-      padding:24px;
-
-      border-radius:30px;
-
-      background:rgba(255,255,255,.94);
-
-      border:1px solid rgba(255,255,255,.92);
-
-      box-shadow:0 25px 75px rgba(23,69,103,.15);
-
-      backdrop-filter:blur(12px);
-
-      -webkit-backdrop-filter:blur(12px);
-
-    }
-
-
-
-    .form-area::before{
-
-      content:"";
-
-      position:absolute;
-
-      inset:auto -70px -120px auto;
-
-      width:260px;
-
-      height:260px;
-
-      border-radius:50%;
-
-      background:radial-gradient(circle,rgba(0,160,255,.10),transparent 70%);
-
-      pointer-events:none;
-
-    }
-
-
-
-    .form-area.theme-sehat{
-
-      box-shadow:
-
-        0 28px 80px rgba(0,121,61,.15),
-
-        inset 0 0 0 1px rgba(0,168,91,.06);
-
-    }
-
-
-
-    .form-area.theme-berobat{
-
-      box-shadow:
-
-        0 28px 80px rgba(224,145,0,.15),
-
-        inset 0 0 0 1px rgba(241,143,0,.07);
-
-    }
-
-
-
-    .form-header{
-
-      position:relative;
-
-      z-index:2;
-
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:flex-start;
-
-      gap:16px;
-
-      padding-bottom:18px;
-
-      border-bottom:1px solid #e7eff4;
-
-    }
-
-
-
-    .form-title-line{
-
-      display:flex;
-
-      align-items:flex-start;
-
-      gap:12px;
-
-    }
-
-
-
-    .form-mark{
-
-      width:44px;
-
-      height:44px;
-
-      flex:0 0 44px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      border-radius:15px;
-
-      font-size:21px;
-
-      background:#ecf7ff;
-
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
-
-    }
-
-
-
-    .theme-sehat .form-mark{
-
-      background:#e8f8ef;
-
-    }
-
-
-
-    .theme-berobat .form-mark{
-
-      background:#fff4cb;
-
-    }
-
-
-
-    .form-header h2{
-
-      margin:0;
-
-      font-size:clamp(20px,3vw,28px);
-
-      color:#17394f;
-
-      letter-spacing:-.45px;
-
-    }
-
-
-
-    .form-header p{
-
-      margin:6px 0 0;
-
-      color:#708697;
-
-      font-size:13px;
-
-      line-height:1.5;
-
-    }
-
-
-
-    .close-btn{
-
-      flex:0 0 auto;
-
-      border:1px solid #dce8ee !important;
-
-      background:#f3f7fa !important;
-
-      color:#476274 !important;
-
-      box-shadow:none !important;
-
-    }
-
-
-
-    .form-grid{
-
-      position:relative;
-
-      z-index:2;
-
-      display:grid;
-
-      grid-template-columns:repeat(2,minmax(0,1fr));
-
-      gap:16px;
-
-      margin-top:22px;
-
-    }
-
-
-
-    .field{
-
-      display:flex;
-
-      flex-direction:column;
-
-      gap:7px;
-
-    }
-
-
-
-    .full{
-
-      grid-column:1/-1;
-
-    }
-
-
-
-    label{
-
-      font-size:12px;
-
-      font-weight:800;
-
-      color:#4f6779;
-
-      letter-spacing:.1px;
-
-    }
-
-
-
-    input,
-
-    select,
-
-    textarea{
-
-      width:100%;
-
-      border:1px solid #dbe7ee;
-
-      border-radius:14px;
-
-      padding:13px 14px;
-
-      font-size:14px;
-
-      line-height:1.4;
-
-      color:#17384d;
-
-      background:linear-gradient(180deg,#ffffff,#fafdff);
-
-      outline:none;
-
-      font-family:inherit;
-
-      box-shadow:
-
-        inset 0 1px 0 rgba(255,255,255,.86),
-
-        0 6px 18px rgba(38,80,110,.04);
-
-      transition:
-
-        border-color .18s ease,
-
-        box-shadow .18s ease,
-
-        transform .18s ease;
-
-    }
-
-
-
-    input::placeholder,
-
-    textarea::placeholder{
-
-      color:#9aadb9;
-
-    }
-
-
-
-    input:focus,
-
-    select:focus,
-
-    textarea:focus{
-
-      border-color:#238de7;
-
-      box-shadow:
-
-        0 0 0 4px rgba(35,141,231,.10),
-
-        0 10px 24px rgba(38,110,157,.08);
-
-      transform:translateY(-1px);
-
-    }
-
-
-
-    .theme-sehat input:focus,
-
-    .theme-sehat select:focus,
-
-    .theme-sehat textarea:focus{
-
-      border-color:#13aa68;
-
-      box-shadow:
-
-        0 0 0 4px rgba(19,170,104,.10),
-
-        0 10px 24px rgba(28,127,84,.08);
-
-    }
-
-
-
-    .theme-berobat input:focus,
-
-    .theme-berobat select:focus,
-
-    .theme-berobat textarea:focus{
-
-      border-color:#f1a116;
-
-      box-shadow:
-
-        0 0 0 4px rgba(241,161,22,.11),
-
-        0 10px 24px rgba(185,121,16,.08);
-
-    }
-
-
-
-    textarea{
-
-      min-height:106px;
-
-      resize:vertical;
-
-    }
-
-
-
-    .field-note{
-
-      margin-top:2px;
-
-      font-size:10px;
-
-      color:#8aa0af;
-
-    }
-
-
-
-    .actions{
-
-      position:relative;
-
-      z-index:2;
-
-      display:flex;
-
-      gap:10px;
-
-      margin-top:22px;
-
-      flex-wrap:wrap;
-
-    }
-
-
-
-    button{
-
-      border:none;
-
-      border-radius:14px;
-
-      min-height:46px;
-
-      padding:12px 18px;
-
-      font-size:14px;
-
-      font-weight:900;
-
-      cursor:pointer;
-
-      font-family:inherit;
-
-      transition:
-
-        transform .18s ease,
-
-        box-shadow .18s ease,
-
-        filter .18s ease,
-
-        background .18s ease;
-
-    }
-
-
-
-    button:hover{
-
-      transform:translateY(-2px);
-
-      filter:saturate(1.05);
-
-    }
-
-
-
-    button:active{
-
-      transform:translateY(0);
-
-    }
-
-
-
-    #btnSubmit{
-
-      color:#fff;
-
-      background:
-
-        linear-gradient(145deg,#0f95f8 0%,#087edb 45%,#075eb6 100%);
-
-      box-shadow:
-
-        0 13px 28px rgba(8,126,219,.23),
-
-        inset 0 1px 0 rgba(255,255,255,.34);
-
-    }
-
-
-
-    .theme-sehat #btnSubmit{
-
-      background:
-
-        linear-gradient(145deg,#18ba70 0%,#099b5a 48%,#087241 100%);
-
-      box-shadow:
-
-        0 13px 28px rgba(9,155,90,.24),
-
-        inset 0 1px 0 rgba(255,255,255,.34);
-
-    }
-
-
-
-    .theme-berobat #btnSubmit{
-
-      color:#503300;
-
-      background:
-
-        linear-gradient(145deg,#ffe46c 0%,#ffc328 46%,#f09300 100%);
-
-      box-shadow:
-
-        0 13px 28px rgba(240,147,0,.24),
-
-        inset 0 1px 0 rgba(255,255,255,.37);
-
-    }
-
-
-
-    .secondary{
-
-      background:linear-gradient(180deg,#f6f9fb,#edf3f6);
-
-      color:#496274;
-
-      border:1px solid #dde8ee;
-
-      box-shadow:0 7px 18px rgba(42,73,95,.07);
-
-    }
-
-
-
-    .message{
-
-      position:relative;
-
-      z-index:2;
-
-      display:none;
-
-      margin-top:18px;
-
-      padding:16px;
-
-      border-radius:15px;
-
-      line-height:1.55;
-
-      font-size:13px;
-
-    }
-
-
-
-    .success{
-
-      background:linear-gradient(145deg,#ecfbf3,#dcf6e8);
-
-      color:#1b704a;
-
-      border:1px solid #c4ead5;
-
-    }
-
-
-
-    .error{
-
-      background:linear-gradient(145deg,#fff2f2,#ffe5e5);
-
-      color:#a12b2b;
-
-      border:1px solid #f3cccc;
-
-    }
-
-
-
-    .loading{
-
-      opacity:.62;
-
-      pointer-events:none;
-
-    }
-
-
-
-    .hidden{
-
-      display:none!important;
-
-    }
-
-
-
-    .readonly-note{
-
-      padding:11px 12px;
-
-      border-radius:12px;
-
-      background:#f6fafc;
-
-      border:1px dashed #cbdfe9;
-
-      color:#6d8393;
-
-      font-size:11px;
-
-      line-height:1.5;
-
-    }
-
-
-
-    /* ===== FOOTER ===== */
-
-    .footer-note{
-
-      margin-top:18px;
-
-      text-align:center;
-
-      color:#90a3ae;
-
-      font-size:10px;
-
-      letter-spacing:.15px;
-
-    }
-
-
-
-    /* ===== MOBILE-FIRST ===== */
-
-    @media (max-width:700px){
-
-      body{
-
-        background:
-
-          radial-gradient(circle at 15% 5%,rgba(0,166,255,.17),transparent 28%),
-
-          radial-gradient(circle at 95% 22%,rgba(0,201,120,.15),transparent 30%),
-
-          linear-gradient(180deg,#edf8ff 0%,#f9fcfd 52%,#eefaf5 100%);
-
-      }
-
-
-
-      .container{
-
-        width:calc(100% - 24px);
-
-        padding:10px 0 28px;
-
-      }
-
-
-
-      header{
-
-        padding:4px 2px 13px;
-
-      }
-
-
-
-      .brand{
-
-        gap:11px;
-
-      }
-
-
-
-      .logo{
-
-        width:50px;
-
-        height:50px;
-
-        flex-basis:50px;
-
-        border-radius:17px;
-
-        font-size:27px;
-
-      }
-
-
-
-      .brand-copy h1{
-
-        font-size:18px;
-
-      }
-
-
-
-      .brand-copy p{
-
-        font-size:11px;
-
-      }
-
-
-
-      .hero{
-
-        padding:17px;
-
-        border-radius:24px;
-
-        margin-bottom:14px;
-
-      }
-
-
-
-      .hero-top{
-
-        display:block;
-
-      }
-
-
-
-      .hero h2{
-
-        font-size:25px;
-
-      }
-
-
-
-      .hero-description{
-
-        font-size:12px;
-
-        line-height:1.55;
-
-      }
-
-
-
-      .hero-badge{
-
-        margin-top:12px;
-
-        font-size:10px;
-
-        padding:8px 11px;
-
-      }
-
-
-
-      .cards{
-
-        grid-template-columns:1fr;
-
-        gap:13px;
-
-        margin-top:16px;
-
-      }
-
-
-
-      .card{
-
-        min-height:196px;
-
-        padding:20px;
-
-        border-radius:24px;
-
-      }
-
-
-
-      .card h3{
-
-        font-size:22px;
-
-      }
-
-
-
-      .card p{
-
-        font-size:12px;
-
-        max-width:84%;
-
-      }
-
-
-
-      .icon-wrap{
-
-        width:54px;
-
-        height:54px;
-
-        margin-bottom:15px;
-
-        border-radius:18px;
-
-      }
-
-
-
-      .card-action{
-
-        width:43px;
-
-        height:43px;
-
-        right:15px;
-
-        bottom:15px;
-
-        border-radius:15px;
-
-      }
-
-
-
-      .mini-tag{
-
-        margin-top:12px;
-
-        font-size:10px;
-
-      }
-
-
-
-      .form-area{
-
-        padding:17px;
-
-        border-radius:24px;
-
-        margin-top:14px;
-
-      }
-
-
-
-      .form-header{
-
-        gap:12px;
-
-      }
-
-
-
-      .form-title-line{
-
-        gap:10px;
-
-      }
-
-
-
-      .form-mark{
-
-        width:40px;
-
-        height:40px;
-
-        flex-basis:40px;
-
-        border-radius:14px;
-
-        font-size:19px;
-
-      }
-
-
-
-      .form-header h2{
-
-        font-size:20px;
-
-      }
-
-
-
-      .form-header p{
-
-        font-size:11px;
-
-      }
-
-
-
-      .form-header{
-
-        align-items:flex-start;
-
-      }
-
-
-
-      .close-btn{
-
-        min-height:40px;
-
-        padding:9px 11px;
-
-        font-size:11px;
-
-      }
-
-
-
-      .form-grid{
-
-        grid-template-columns:1fr;
-
-        gap:13px;
-
-        margin-top:18px;
-
-      }
-
-
-
-      .full{
-
-        grid-column:auto;
-
-      }
-
-
-
-      label{
-
-        font-size:11px;
-
-      }
-
-
-
-      input,
-
-      select,
-
-      textarea{
-
-        min-height:44px;
-
-        padding:12px;
-
-        border-radius:13px;
-
-        font-size:13px;
-
-      }
-
-
-
-      textarea{
-
-        min-height:100px;
-
-      }
-
-
-
-      .actions{
-
-        display:grid;
-
-        grid-template-columns:1fr 1fr;
-
-        gap:9px;
-
-      }
-
-
-
-      .actions button{
-
-        width:100%;
-
-        padding:11px 12px;
-
-        min-height:46px;
-
-        font-size:13px;
-
-      }
-
-
-
-      .message{
-
-        padding:14px;
-
-        font-size:12px;
-
-      }
-
-
-
-      .footer-note{
-
-        font-size:9px;
-
-      }
-
-    }
-
-
-
-    @media (min-width:701px) and (max-width:950px){
-
-      .container{
-
-        width:92%;
-
-      }
-
-      .card{
-
-        min-height:210px;
-
-      }
-
-    }
-
-
-
-    @media (max-width:480px){
-
-      .cards{
-
-        gap:11px;
-
-      }
-
-
-
-      .card{
-
-        min-height:184px;
-
-      }
-
-
-
-      .card h3{
-
-        font-size:20px;
-
-      }
-
-
-
-      .card p{
-
-        max-width:82%;
-
-      }
-
-
-
-      .card-action{
-
-        width:40px;
-
-        height:40px;
-
-        font-size:19px;
-
-      }
-
-
-
-      .actions{
-
-        grid-template-columns:1fr;
-
-      }
-
-    }
-
-
-
-    @media (prefers-reduced-motion:reduce){
-
-      *,
-
-      *::before,
-
-      *::after{
-
-        scroll-behavior:auto!important;
-
-        transition:none!important;
-
-      }
-
-    }
-
-  </style>
 
 </head>
 
@@ -1822,617 +21,617 @@
 
 <body>
 
-  <div class="container">
+  <div class="container">
 
 
 
-    <header>
+    <header>
 
-      <div class="brand">
+      <div class="brand">
 
-        <div class="logo">+</div>
+        <div class="logo">+</div>
 
-        <div class="brand-copy">
+        <div class="brand-copy">
 
-          <h1>UPTD Puskesmas Klampis Ngasem</h1>
+          <h1>UPTD Puskesmas Klampis Ngasem</h1>
 
-          <p>Layanan Surat Keterangan • Pemohon</p>
+          <p>Layanan Surat Keterangan • Pemohon</p>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
-    </header>
+    </header>
 
 
 
-    <section class="hero">
+    <section class="hero">
 
-      <div class="hero-top">
+      <div class="hero-top">
 
-        <div>
+        <div>
 
-          <h2>Pengajuan Surat</h2>
+          <h2>Pengajuan Surat</h2>
 
-          <div class="hero-description">
+          <div class="hero-description">
 
-            Pilih layanan yang dibutuhkan, lalu lengkapi data sesuai formulir.
+            Pilih layanan yang dibutuhkan, lalu lengkapi data sesuai formulir.
 
-            Tampilan dirancang mobile-first agar nyaman digunakan dari HP, tablet, maupun PC.
+            Tampilan dirancang mobile-first agar nyaman digunakan dari HP, tablet, maupun PC.
 
-          </div>
+          </div>
 
-        </div>
+        </div>
 
 
 
-        <div class="hero-badge">
+        <div class="hero-badge">
 
-          <span class="dot"></span>
+          <span class="dot"></span>
 
-          Layanan Online
+          Layanan Online
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
 
 
-      <div class="cards">
+      <div class="cards">
 
-        <div class="card sehat" onclick="bukaForm('SURAT_SEHAT')" role="button" tabindex="0"
+        <div class="card sehat" onclick="bukaForm('SURAT_SEHAT')" role="button" tabindex="0"
 
-             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('SURAT_SEHAT')}">
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('SURAT_SEHAT')}">
 
-          <div class="icon-wrap">🩺</div>
+          <div class="icon-wrap">🩺</div>
 
-          <h3>Surat Keterangan Sehat</h3>
+          <h3>Surat Keterangan Sehat</h3>
 
-          <p>Pengajuan surat keterangan sehat untuk keperluan administrasi.</p>
+          <p>Pengajuan surat keterangan sehat untuk keperluan administrasi.</p>
 
-          <div class="mini-tag">LAYANAN KESEHATAN</div>
+          <div class="mini-tag">LAYANAN KESEHATAN</div>
 
-          <div class="card-action">→</div>
+          <div class="card-action">→</div>
 
-        </div>
+        </div>
 
 
 
-        <div class="card berobat" onclick="bukaForm('KETERANGAN_BEROBAT')" role="button" tabindex="0"
+        <div class="card berobat" onclick="bukaForm('KETERANGAN_BEROBAT')" role="button" tabindex="0"
 
-             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('KETERANGAN_BEROBAT')}">
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('KETERANGAN_BEROBAT')}">
 
-          <div class="icon-wrap">📋</div>
+          <div class="icon-wrap">📋</div>
 
-          <h3>Keterangan Berobat</h3>
+          <h3>Keterangan Berobat</h3>
 
-          <p>Pengajuan keterangan bahwa pasien telah mendapatkan pelayanan.</p>
+          <p>Pengajuan keterangan bahwa pasien telah mendapatkan pelayanan.</p>
 
-          <div class="mini-tag">BUKTI PELAYANAN</div>
+          <div class="mini-tag">BUKTI PELAYANAN</div>
 
-          <div class="card-action">→</div>
+          <div class="card-action">→</div>
 
-        </div>
+        </div>
 
-      </div>
+      </div>
 
 
 
-      <div id="formArea" class="form-area">
+      <div id="formArea" class="form-area">
 
-        <div class="form-header">
+        <div class="form-header">
 
-          <div class="form-title-line">
+          <div class="form-title-line">
 
-            <div class="form-mark" id="formMark">🩺</div>
+            <div class="form-mark" id="formMark">🩺</div>
 
-            <div>
+            <div>
 
-              <h2 id="judulForm">Form Permohonan</h2>
+              <h2 id="judulForm">Form Permohonan</h2>
 
-              <p id="subjudulForm">Silakan lengkapi data.</p>
+              <p id="subjudulForm">Silakan lengkapi data.</p>
 
-            </div>
+            </div>
 
-          </div>
+          </div>
 
-          <button type="button" class="secondary close-btn" onclick="tutupForm()">Tutup</button>
+          <button type="button" class="secondary close-btn" onclick="tutupForm()">Tutup</button>
 
-        </div>
+        </div>
 
 
 
-        <form id="formPermohonan">
+        <form id="formPermohonan">
 
-          <input type="hidden" id="jenisPermohonan">
+          <input type="hidden" id="jenisPermohonan">
 
 
 
-          <div class="form-grid">
+          <div class="form-grid">
 
 
 
-            <!-- NAMA -->
+            <!-- NAMA -->
 
-            <div class="field full">
+            <div class="field full">
 
-              <label for="nama">Nama</label>
+              <label for="nama">Nama</label>
 
-              <input type="text" id="nama" required placeholder="Masukkan nama lengkap" autocomplete="name">
+              <input type="text" id="nama" required placeholder="Masukkan nama lengkap" autocomplete="name">
 
-            </div>
+            </div>
 
 
 
-            <!-- UMUR -->
+            <!-- UMUR -->
 
-            <div class="field" id="umurField">
+            <div class="field" id="umurField">
 
-              <label for="umur">Umur</label>
+              <label for="umur">Umur</label>
 
-              <input type="number" id="umur" min="0" step="1" inputmode="numeric"
+              <input type="number" id="umur" min="0" step="1" inputmode="numeric"
 
-                     required placeholder="Masukkan umur">
+                     required placeholder="Masukkan umur">
 
-            </div>
+            </div>
 
 
 
-            <!-- JENIS KELAMIN -->
+            <!-- JENIS KELAMIN -->
 
-            <div class="field" id="jenisKelaminField">
+            <div class="field" id="jenisKelaminField">
 
-              <label for="jenisKelamin">Jenis Kelamin</label>
+              <label for="jenisKelamin">Jenis Kelamin</label>
 
-              <select id="jenisKelamin" required>
+              <select id="jenisKelamin" required>
 
-                <option value="">Pilih jenis kelamin</option>
+                <option value="">Pilih jenis kelamin</option>
 
-                <option value="Laki-laki">Laki-laki</option>
+                <option value="Laki-laki">Laki-laki</option>
 
-                <option value="Perempuan">Perempuan</option>
+                <option value="Perempuan">Perempuan</option>
 
-              </select>
+              </select>
 
-            </div>
+            </div>
 
 
 
-            <!-- TUJUAN SURAT SEHAT -->
+            <!-- TUJUAN SURAT SEHAT -->
 
-            <div class="field full" id="keperluanField">
+            <div class="field full" id="keperluanField">
 
-              <label for="keperluan">Perihal Tujuan Surat Sehat Untuk?</label>
+              <label for="keperluan">Perihal Tujuan Surat Sehat Untuk?</label>
 
-              <input type="text" id="keperluan" placeholder="Contoh: melamar pekerjaan">
+              <input type="text" id="keperluan" placeholder="Contoh: melamar pekerjaan">
 
-            </div>
+            </div>
 
 
 
-            <!-- PEKERJAAN / SEKOLAH UNTUK BEROBAT -->
+            <!-- PEKERJAAN / SEKOLAH UNTUK BEROBAT -->
 
-            <div class="field" id="pekerjaanField">
+            <div class="field" id="pekerjaanField">
 
-              <label for="pekerjaanSekolah">Pekerjaan / Sekolah</label>
+              <label for="pekerjaanSekolah">Pekerjaan / Sekolah</label>
 
-              <input type="text" id="pekerjaanSekolah" placeholder="Contoh: Karyawan / SMK">
+              <input type="text" id="pekerjaanSekolah" placeholder="Contoh: Karyawan / SMK">
 
-            </div>
+            </div>
 
 
 
-            <!-- TANGGAL BEROBAT -->
+            <!-- TANGGAL BEROBAT -->
 
-            <div class="field" id="tanggalBerobatField">
+            <div class="field" id="tanggalBerobatField">
 
-              <label for="tanggalBerobat">Tanggal Berobat</label>
+              <label for="tanggalBerobat">Tanggal Berobat</label>
 
-              <input type="date" id="tanggalBerobat">
+              <input type="date" id="tanggalBerobat">
 
-            </div>
+            </div>
 
 
 
-            <!-- ALAMAT -->
+            <!-- ALAMAT -->
 
-            <div class="field full">
+            <div class="field full">
 
-              <label for="alamat">Alamat Domisili</label>
+              <label for="alamat">Alamat Domisili</label>
 
-              <textarea id="alamat" required placeholder="Masukkan alamat domisili lengkap"></textarea>
+              <textarea id="alamat" required placeholder="Masukkan alamat domisili lengkap"></textarea>
 
-            </div>
+            </div>
 
 
 
-            <!-- ================= SURAT SEHAT ================= -->
+            <!-- ================= SURAT SEHAT ================= -->
 
 
 
-            <div class="field sehat-field" id="tinggiBadanField">
+            <div class="field sehat-field" id="tinggiBadanField">
 
-              <label for="tinggiBadan">Tinggi Badan <span class="field-note">(* tanpa Cm)</span></label>
+              <label for="tinggiBadan">Tinggi Badan <span class="field-note">(* tanpa Cm)</span></label>
 
-              <input type="number" id="tinggiBadan" min="1" step="0.1" inputmode="decimal"
+              <input type="number" id="tinggiBadan" min="1" step="0.1" inputmode="decimal"
 
-                     placeholder="Contoh: 170">
+                     placeholder="Contoh: 170">
 
-            </div>
+            </div>
 
 
 
-            <div class="field sehat-field" id="beratBadanField">
+            <div class="field sehat-field" id="beratBadanField">
 
-              <label for="beratBadan">Berat Badan <span class="field-note">(* tanpa Kg)</span></label>
+              <label for="beratBadan">Berat Badan <span class="field-note">(* tanpa Kg)</span></label>
 
-              <input type="number" id="beratBadan" min="1" step="0.1" inputmode="decimal"
+              <input type="number" id="beratBadan" min="1" step="0.1" inputmode="decimal"
 
-                     placeholder="Contoh: 65">
+                     placeholder="Contoh: 65">
 
-            </div>
+            </div>
 
 
 
-            <div class="field sehat-field" id="golonganDarahField">
+            <div class="field sehat-field" id="golonganDarahField">
 
-              <label for="golonganDarah">Golongan Darah</label>
+              <label for="golonganDarah">Golongan Darah</label>
 
-              <select id="golonganDarah">
+              <select id="golonganDarah">
 
-                <option value="">Pilih golongan darah</option>
+                <option value="">Pilih golongan darah</option>
 
-                <option value="A">A</option>
+                <option value="A">A</option>
 
-                <option value="B">B</option>
+                <option value="B">B</option>
 
-                <option value="AB">AB</option>
+                <option value="AB">AB</option>
 
-                <option value="O">O</option>
+                <option value="O">O</option>
 
-              </select>
+              </select>
 
-            </div>
+            </div>
 
 
 
-            <div class="field sehat-field" id="berkacamataField">
+            <div class="field sehat-field" id="berkacamataField">
 
-              <label for="berkacamata">Berkacamata / Tidak Berkacamata</label>
+              <label for="berkacamata">Berkacamata / Tidak Berkacamata</label>
 
-              <select id="berkacamata">
+              <select id="berkacamata">
 
-                <option value="">Pilih</option>
+                <option value="">Pilih</option>
 
-                <option value="Berkacamata">Berkacamata</option>
+                <option value="Berkacamata">Berkacamata</option>
 
-                <option value="Tidak Berkacamata">Tidak Berkacamata</option>
+                <option value="Tidak Berkacamata">Tidak Berkacamata</option>
 
-              </select>
+              </select>
 
-            </div>
+            </div>
 
 
 
-          </div>
+          </div>
 
 
 
-          <div class="actions">
+          <div class="actions">
 
-            <button type="submit" id="btnSubmit">Submit</button>
+            <button type="submit" id="btnSubmit">Submit</button>
 
-            <button type="button" class="secondary" onclick="resetForm()">Reset</button>
+            <button type="button" class="secondary" onclick="resetForm()">Reset</button>
 
-          </div>
+          </div>
 
-        </form>
+        </form>
 
 
 
-        <div id="message" class="message"></div>
+        <div id="message" class="message"></div>
 
-      </div>
+      </div>
 
 
 
-      <div class="footer-note">
+      <div class="footer-note">
 
-        UPTD Puskesmas Klampis Ngasem • Layanan pemohon
+        UPTD Puskesmas Klampis Ngasem • Layanan pemohon
 
-      </div>
+      </div>
 
-    </section>
+    </section>
 
 
 
-  </div>
+  </div>
 
 
 
-  <script>
+  <script>
 
-    let jenisAktif = '';
+    let jenisAktif = '';
 
 
 
-    function setFieldRequired(id, required) {
+    function setFieldRequired(id, required) {
 
-      const el = document.getElementById(id);
+      const el = document.getElementById(id);
 
-      if (el) el.required = required;
+      if (el) el.required = required;
 
-    }
+    }
 
 
 
-    function setVisible(id, visible) {
+    function setVisible(id, visible) {
 
-      const el = document.getElementById(id);
+      const el = document.getElementById(id);
 
-      if (el) el.style.display = visible ? 'flex' : 'none';
+      if (el) el.style.display = visible ? 'flex' : 'none';
 
-    }
+    }
 
 
 
-    function bukaForm(jenis) {
+    function bukaForm(jenis) {
 
-      jenisAktif = jenis;
+      jenisAktif = jenis;
 
-      document.getElementById('jenisPermohonan').value = jenis;
+      document.getElementById('jenisPermohonan').value = jenis;
 
 
 
-      const isSehat = jenis === 'SURAT_SEHAT';
+      const isSehat = jenis === 'SURAT_SEHAT';
 
-      const formArea = document.getElementById('formArea');
+      const formArea = document.getElementById('formArea');
 
-      const formMark = document.getElementById('formMark');
+      const formMark = document.getElementById('formMark');
 
 
 
-      document.getElementById('judulForm').innerText = isSehat
+      document.getElementById('judulForm').innerText = isSehat
 
-        ? 'SURAT KETERANGAN SEHAT'
+        ? 'SURAT KETERANGAN SEHAT'
 
-        : 'KETERANGAN BEROBAT';
+        : 'KETERANGAN BEROBAT';
 
 
 
-      document.getElementById('subjudulForm').innerText = isSehat
+      document.getElementById('subjudulForm').innerText = isSehat
 
-        ? 'Silakan masukkan identitas anda kemudian klik submit.'
+        ? 'Silakan masukkan identitas anda kemudian klik submit.'
 
-        : 'Silakan isi data pasien dan tanggal berobat.';
+        : 'Silakan isi data pasien dan tanggal berobat.';
 
 
 
-      formMark.innerText = isSehat ? '🩺' : '📋';
+      formMark.innerText = isSehat ? '🩺' : '📋';
 
 
 
-      // Tema form sesuai jenis layanan
+      // Tema form sesuai jenis layanan
 
-      formArea.classList.remove('theme-sehat','theme-berobat');
+      formArea.classList.remove('theme-sehat','theme-berobat');
 
-      formArea.classList.add(isSehat ? 'theme-sehat' : 'theme-berobat');
+      formArea.classList.add(isSehat ? 'theme-sehat' : 'theme-berobat');
 
 
 
-      // Form khusus SURAT SEHAT sesuai rancangan sebelumnya.
+      // Form khusus SURAT SEHAT sesuai rancangan sebelumnya.
 
-      setVisible('keperluanField', isSehat);
+      setVisible('keperluanField', isSehat);
 
-      setVisible('pekerjaanField', !isSehat);
+      setVisible('pekerjaanField', !isSehat);
 
-      setVisible('tanggalBerobatField', !isSehat);
+      setVisible('tanggalBerobatField', !isSehat);
 
 
 
-      setVisible('tinggiBadanField', isSehat);
+      setVisible('tinggiBadanField', isSehat);
 
-      setVisible('beratBadanField', isSehat);
+      setVisible('beratBadanField', isSehat);
 
-      setVisible('golonganDarahField', isSehat);
+      setVisible('golonganDarahField', isSehat);
 
-      setVisible('berkacamataField', isSehat);
+      setVisible('berkacamataField', isSehat);
 
 
 
-      setFieldRequired('keperluan', isSehat);
+      setFieldRequired('keperluan', isSehat);
 
-      setFieldRequired('pekerjaanSekolah', !isSehat);
+      setFieldRequired('pekerjaanSekolah', !isSehat);
 
-      setFieldRequired('tanggalBerobat', !isSehat);
+      setFieldRequired('tanggalBerobat', !isSehat);
 
 
 
-      setFieldRequired('tinggiBadan', isSehat);
+      setFieldRequired('tinggiBadan', isSehat);
 
-      setFieldRequired('beratBadan', isSehat);
+      setFieldRequired('beratBadan', isSehat);
 
-      setFieldRequired('golonganDarah', isSehat);
+      setFieldRequired('golonganDarah', isSehat);
 
-      setFieldRequired('berkacamata', isSehat);
+      setFieldRequired('berkacamata', isSehat);
 
 
 
-      formArea.style.display = 'block';
+      formArea.style.display = 'block';
 
 
 
-      requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
 
-        formArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        formArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      });
+      });
 
-    }
+    }
 
 
 
-    function tutupForm() {
+    function tutupForm() {
 
-      document.getElementById('formArea').style.display = 'none';
+      document.getElementById('formArea').style.display = 'none';
 
-    }
+    }
 
 
 
-    function resetForm() {
+    function resetForm() {
 
-      document.getElementById('formPermohonan').reset();
+      document.getElementById('formPermohonan').reset();
 
-      document.getElementById('jenisPermohonan').value = jenisAktif;
+      document.getElementById('jenisPermohonan').value = jenisAktif;
 
-      document.getElementById('message').style.display = 'none';
+      document.getElementById('message').style.display = 'none';
 
-    }
+    }
 
 
 
-    document.getElementById('formPermohonan').addEventListener('submit', function(e) {
+    document.getElementById('formPermohonan').addEventListener('submit', function(e) {
 
-      e.preventDefault();
+      e.preventDefault();
 
 
 
-      const formArea = document.getElementById('formArea');
+      const formArea = document.getElementById('formArea');
 
-      const btn = document.getElementById('btnSubmit');
+      const btn = document.getElementById('btnSubmit');
 
 
 
-      const data = {
+      const data = {
 
-        jenisPermohonan: jenisAktif,
+        jenisPermohonan: jenisAktif,
 
-        nama: document.getElementById('nama').value.trim(),
+        nama: document.getElementById('nama').value.trim(),
 
-        jenisKelamin: document.getElementById('jenisKelamin').value,
+        jenisKelamin: document.getElementById('jenisKelamin').value,
 
-        umur: document.getElementById('umur').value.trim(),
+        umur: document.getElementById('umur').value.trim(),
 
-        pekerjaanSekolah: document.getElementById('pekerjaanSekolah').value.trim(),
+        pekerjaanSekolah: document.getElementById('pekerjaanSekolah').value.trim(),
 
-        keperluan: document.getElementById('keperluan').value.trim(),
+        keperluan: document.getElementById('keperluan').value.trim(),
 
-        alamat: document.getElementById('alamat').value.trim(),
+        alamat: document.getElementById('alamat').value.trim(),
 
 
 
-        // Data Surat Keterangan Sehat
+        // Data Surat Keterangan Sehat
 
-        tinggiBadan: document.getElementById('tinggiBadan').value.trim(),
+        tinggiBadan: document.getElementById('tinggiBadan').value.trim(),
 
-        beratBadan: document.getElementById('beratBadan').value.trim(),
+        beratBadan: document.getElementById('beratBadan').value.trim(),
 
-        golonganDarah: document.getElementById('golonganDarah').value,
+        golonganDarah: document.getElementById('golonganDarah').value,
 
-        berkacamata: document.getElementById('berkacamata').value,
+        berkacamata: document.getElementById('berkacamata').value,
 
 
 
-        tanggalBerobat: document.getElementById('tanggalBerobat').value
+        tanggalBerobat: document.getElementById('tanggalBerobat').value
 
-      };
+      };
 
 
 
-      btn.innerText = 'Mengirim...';
+      btn.innerText = 'Mengirim...';
 
-      formArea.classList.add('loading');
+      formArea.classList.add('loading');
 
 
 
-      google.script.run
+      google.script.run
 
-        .withSuccessHandler(function(result) {
+        .withSuccessHandler(function(result) {
 
-          formArea.classList.remove('loading');
+          formArea.classList.remove('loading');
 
-          btn.innerText = 'Submit';
+          btn.innerText = 'Submit';
 
 
 
-          tampilMessage(
+          tampilMessage(
 
-            'success',
+            'success',
 
-            '<b>Permohonan berhasil dikirim.</b><br><br>' +
+            '<b>Permohonan berhasil dikirim.</b><br><br>' +
 
-            'ID Permohonan:<br><b>' + escapeHtml(result.id) + '</b><br><br>' +
+            'ID Permohonan:<br><b>' + escapeHtml(result.id) + '</b><br><br>' +
 
-            'Silakan menunggu proses petugas.'
+            'Silakan menunggu proses petugas.'
 
-          );
+          );
 
 
 
-          document.getElementById('formPermohonan').reset();
+          document.getElementById('formPermohonan').reset();
 
-          document.getElementById('jenisPermohonan').value = jenisAktif;
+          document.getElementById('jenisPermohonan').value = jenisAktif;
 
-        })
+        })
 
-        .withFailureHandler(function(error) {
+        .withFailureHandler(function(error) {
 
-          formArea.classList.remove('loading');
+          formArea.classList.remove('loading');
 
-          btn.innerText = 'Submit';
+          btn.innerText = 'Submit';
 
 
 
-          tampilMessage(
+          tampilMessage(
 
-            'error',
+            'error',
 
-            escapeHtml(error.message || 'Terjadi kesalahan.')
+            escapeHtml(error.message || 'Terjadi kesalahan.')
 
-          );
+          );
 
-        })
+        })
 
-        .submitPermohonan(data);
+        .submitPermohonan(data);
 
-    });
+    });
 
 
 
-    function tampilMessage(type, text) {
+    function tampilMessage(type, text) {
 
-      const el = document.getElementById('message');
+      const el = document.getElementById('message');
 
-      el.className = 'message ' + type;
+      el.className = 'message ' + type;
 
-      el.innerHTML = text;
+      el.innerHTML = text;
 
-      el.style.display = 'block';
+      el.style.display = 'block';
 
-      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-    }
+    }
 
 
 
-    function escapeHtml(value) {
+    function escapeHtml(value) {
 
-      return String(value || '')
+      return String(value || '')
 
-        .replace(/&/g, '&amp;')
+        .replace(/&/g, '&amp;')
 
-        .replace(/</g, '&lt;')
+        .replace(/</g, '&lt;')
 
-        .replace(/>/g, '&gt;')
+        .replace(/>/g, '&gt;')
 
-        .replace(/"/g, '&quot;')
+        .replace(/"/g, '&quot;')
 
-        .replace(/'/g, '&#039;');
+        .replace(/'/g, '&#039;');
 
-    }
+    }
 
-  </script>
+  </script>
 
 </body>
 
