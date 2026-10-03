@@ -997,3 +997,1443 @@
       box-shadow:
 
         inset 0 1px 0 rgba(255,255,255,.86),
+
+        0 6px 18px rgba(38,80,110,.04);
+
+      transition:
+
+        border-color .18s ease,
+
+        box-shadow .18s ease,
+
+        transform .18s ease;
+
+    }
+
+
+
+    input::placeholder,
+
+    textarea::placeholder{
+
+      color:#9aadb9;
+
+    }
+
+
+
+    input:focus,
+
+    select:focus,
+
+    textarea:focus{
+
+      border-color:#238de7;
+
+      box-shadow:
+
+        0 0 0 4px rgba(35,141,231,.10),
+
+        0 10px 24px rgba(38,110,157,.08);
+
+      transform:translateY(-1px);
+
+    }
+
+
+
+    .theme-sehat input:focus,
+
+    .theme-sehat select:focus,
+
+    .theme-sehat textarea:focus{
+
+      border-color:#13aa68;
+
+      box-shadow:
+
+        0 0 0 4px rgba(19,170,104,.10),
+
+        0 10px 24px rgba(28,127,84,.08);
+
+    }
+
+
+
+    .theme-berobat input:focus,
+
+    .theme-berobat select:focus,
+
+    .theme-berobat textarea:focus{
+
+      border-color:#f1a116;
+
+      box-shadow:
+
+        0 0 0 4px rgba(241,161,22,.11),
+
+        0 10px 24px rgba(185,121,16,.08);
+
+    }
+
+
+
+    textarea{
+
+      min-height:106px;
+
+      resize:vertical;
+
+    }
+
+
+
+    .field-note{
+
+      margin-top:2px;
+
+      font-size:10px;
+
+      color:#8aa0af;
+
+    }
+
+
+
+    .actions{
+
+      position:relative;
+
+      z-index:2;
+
+      display:flex;
+
+      gap:10px;
+
+      margin-top:22px;
+
+      flex-wrap:wrap;
+
+    }
+
+
+
+    button{
+
+      border:none;
+
+      border-radius:14px;
+
+      min-height:46px;
+
+      padding:12px 18px;
+
+      font-size:14px;
+
+      font-weight:900;
+
+      cursor:pointer;
+
+      font-family:inherit;
+
+      transition:
+
+        transform .18s ease,
+
+        box-shadow .18s ease,
+
+        filter .18s ease,
+
+        background .18s ease;
+
+    }
+
+
+
+    button:hover{
+
+      transform:translateY(-2px);
+
+      filter:saturate(1.05);
+
+    }
+
+
+
+    button:active{
+
+      transform:translateY(0);
+
+    }
+
+
+
+    #btnSubmit{
+
+      color:#fff;
+
+      background:
+
+        linear-gradient(145deg,#0f95f8 0%,#087edb 45%,#075eb6 100%);
+
+      box-shadow:
+
+        0 13px 28px rgba(8,126,219,.23),
+
+        inset 0 1px 0 rgba(255,255,255,.34);
+
+    }
+
+
+
+    .theme-sehat #btnSubmit{
+
+      background:
+
+        linear-gradient(145deg,#18ba70 0%,#099b5a 48%,#087241 100%);
+
+      box-shadow:
+
+        0 13px 28px rgba(9,155,90,.24),
+
+        inset 0 1px 0 rgba(255,255,255,.34);
+
+    }
+
+
+
+    .theme-berobat #btnSubmit{
+
+      color:#503300;
+
+      background:
+
+        linear-gradient(145deg,#ffe46c 0%,#ffc328 46%,#f09300 100%);
+
+      box-shadow:
+
+        0 13px 28px rgba(240,147,0,.24),
+
+        inset 0 1px 0 rgba(255,255,255,.37);
+
+    }
+
+
+
+    .secondary{
+
+      background:linear-gradient(180deg,#f6f9fb,#edf3f6);
+
+      color:#496274;
+
+      border:1px solid #dde8ee;
+
+      box-shadow:0 7px 18px rgba(42,73,95,.07);
+
+    }
+
+
+
+    .message{
+
+      position:relative;
+
+      z-index:2;
+
+      display:none;
+
+      margin-top:18px;
+
+      padding:16px;
+
+      border-radius:15px;
+
+      line-height:1.55;
+
+      font-size:13px;
+
+    }
+
+
+
+    .success{
+
+      background:linear-gradient(145deg,#ecfbf3,#dcf6e8);
+
+      color:#1b704a;
+
+      border:1px solid #c4ead5;
+
+    }
+
+
+
+    .error{
+
+      background:linear-gradient(145deg,#fff2f2,#ffe5e5);
+
+      color:#a12b2b;
+
+      border:1px solid #f3cccc;
+
+    }
+
+
+
+    .loading{
+
+      opacity:.62;
+
+      pointer-events:none;
+
+    }
+
+
+
+    .hidden{
+
+      display:none!important;
+
+    }
+
+
+
+    .readonly-note{
+
+      padding:11px 12px;
+
+      border-radius:12px;
+
+      background:#f6fafc;
+
+      border:1px dashed #cbdfe9;
+
+      color:#6d8393;
+
+      font-size:11px;
+
+      line-height:1.5;
+
+    }
+
+
+
+    /* ===== FOOTER ===== */
+
+    .footer-note{
+
+      margin-top:18px;
+
+      text-align:center;
+
+      color:#90a3ae;
+
+      font-size:10px;
+
+      letter-spacing:.15px;
+
+    }
+
+
+
+    /* ===== MOBILE-FIRST ===== */
+
+    @media (max-width:700px){
+
+      body{
+
+        background:
+
+          radial-gradient(circle at 15% 5%,rgba(0,166,255,.17),transparent 28%),
+
+          radial-gradient(circle at 95% 22%,rgba(0,201,120,.15),transparent 30%),
+
+          linear-gradient(180deg,#edf8ff 0%,#f9fcfd 52%,#eefaf5 100%);
+
+      }
+
+
+
+      .container{
+
+        width:calc(100% - 24px);
+
+        padding:10px 0 28px;
+
+      }
+
+
+
+      header{
+
+        padding:4px 2px 13px;
+
+      }
+
+
+
+      .brand{
+
+        gap:11px;
+
+      }
+
+
+
+      .logo{
+
+        width:50px;
+
+        height:50px;
+
+        flex-basis:50px;
+
+        border-radius:17px;
+
+        font-size:27px;
+
+      }
+
+
+
+      .brand-copy h1{
+
+        font-size:18px;
+
+      }
+
+
+
+      .brand-copy p{
+
+        font-size:11px;
+
+      }
+
+
+
+      .hero{
+
+        padding:17px;
+
+        border-radius:24px;
+
+        margin-bottom:14px;
+
+      }
+
+
+
+      .hero-top{
+
+        display:block;
+
+      }
+
+
+
+      .hero h2{
+
+        font-size:25px;
+
+      }
+
+
+
+      .hero-description{
+
+        font-size:12px;
+
+        line-height:1.55;
+
+      }
+
+
+
+      .hero-badge{
+
+        margin-top:12px;
+
+        font-size:10px;
+
+        padding:8px 11px;
+
+      }
+
+
+
+      .cards{
+
+        grid-template-columns:1fr;
+
+        gap:13px;
+
+        margin-top:16px;
+
+      }
+
+
+
+      .card{
+
+        min-height:196px;
+
+        padding:20px;
+
+        border-radius:24px;
+
+      }
+
+
+
+      .card h3{
+
+        font-size:22px;
+
+      }
+
+
+
+      .card p{
+
+        font-size:12px;
+
+        max-width:84%;
+
+      }
+
+
+
+      .icon-wrap{
+
+        width:54px;
+
+        height:54px;
+
+        margin-bottom:15px;
+
+        border-radius:18px;
+
+      }
+
+
+
+      .card-action{
+
+        width:43px;
+
+        height:43px;
+
+        right:15px;
+
+        bottom:15px;
+
+        border-radius:15px;
+
+      }
+
+
+
+      .mini-tag{
+
+        margin-top:12px;
+
+        font-size:10px;
+
+      }
+
+
+
+      .form-area{
+
+        padding:17px;
+
+        border-radius:24px;
+
+        margin-top:14px;
+
+      }
+
+
+
+      .form-header{
+
+        gap:12px;
+
+      }
+
+
+
+      .form-title-line{
+
+        gap:10px;
+
+      }
+
+
+
+      .form-mark{
+
+        width:40px;
+
+        height:40px;
+
+        flex-basis:40px;
+
+        border-radius:14px;
+
+        font-size:19px;
+
+      }
+
+
+
+      .form-header h2{
+
+        font-size:20px;
+
+      }
+
+
+
+      .form-header p{
+
+        font-size:11px;
+
+      }
+
+
+
+      .form-header{
+
+        align-items:flex-start;
+
+      }
+
+
+
+      .close-btn{
+
+        min-height:40px;
+
+        padding:9px 11px;
+
+        font-size:11px;
+
+      }
+
+
+
+      .form-grid{
+
+        grid-template-columns:1fr;
+
+        gap:13px;
+
+        margin-top:18px;
+
+      }
+
+
+
+      .full{
+
+        grid-column:auto;
+
+      }
+
+
+
+      label{
+
+        font-size:11px;
+
+      }
+
+
+
+      input,
+
+      select,
+
+      textarea{
+
+        min-height:44px;
+
+        padding:12px;
+
+        border-radius:13px;
+
+        font-size:13px;
+
+      }
+
+
+
+      textarea{
+
+        min-height:100px;
+
+      }
+
+
+
+      .actions{
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:9px;
+
+      }
+
+
+
+      .actions button{
+
+        width:100%;
+
+        padding:11px 12px;
+
+        min-height:46px;
+
+        font-size:13px;
+
+      }
+
+
+
+      .message{
+
+        padding:14px;
+
+        font-size:12px;
+
+      }
+
+
+
+      .footer-note{
+
+        font-size:9px;
+
+      }
+
+    }
+
+
+
+    @media (min-width:701px) and (max-width:950px){
+
+      .container{
+
+        width:92%;
+
+      }
+
+      .card{
+
+        min-height:210px;
+
+      }
+
+    }
+
+
+
+    @media (max-width:480px){
+
+      .cards{
+
+        gap:11px;
+
+      }
+
+
+
+      .card{
+
+        min-height:184px;
+
+      }
+
+
+
+      .card h3{
+
+        font-size:20px;
+
+      }
+
+
+
+      .card p{
+
+        max-width:82%;
+
+      }
+
+
+
+      .card-action{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:19px;
+
+      }
+
+
+
+      .actions{
+
+        grid-template-columns:1fr;
+
+      }
+
+    }
+
+
+
+    @media (prefers-reduced-motion:reduce){
+
+      *,
+
+      *::before,
+
+      *::after{
+
+        scroll-behavior:auto!important;
+
+        transition:none!important;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <div class="container">
+
+
+
+    <header>
+
+      <div class="brand">
+
+        <div class="logo">+</div>
+
+        <div class="brand-copy">
+
+          <h1>UPTD Puskesmas Klampis Ngasem</h1>
+
+          <p>Layanan Surat Keterangan • Pemohon</p>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <section class="hero">
+
+      <div class="hero-top">
+
+        <div>
+
+          <h2>Pengajuan Surat</h2>
+
+          <div class="hero-description">
+
+            Pilih layanan yang dibutuhkan, lalu lengkapi data sesuai formulir.
+
+            Tampilan dirancang mobile-first agar nyaman digunakan dari HP, tablet, maupun PC.
+
+          </div>
+
+        </div>
+
+
+
+        <div class="hero-badge">
+
+          <span class="dot"></span>
+
+          Layanan Online
+
+        </div>
+
+      </div>
+
+
+
+      <div class="cards">
+
+        <div class="card sehat" onclick="bukaForm('SURAT_SEHAT')" role="button" tabindex="0"
+
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('SURAT_SEHAT')}">
+
+          <div class="icon-wrap">🩺</div>
+
+          <h3>Surat Keterangan Sehat</h3>
+
+          <p>Pengajuan surat keterangan sehat untuk keperluan administrasi.</p>
+
+          <div class="mini-tag">LAYANAN KESEHATAN</div>
+
+          <div class="card-action">→</div>
+
+        </div>
+
+
+
+        <div class="card berobat" onclick="bukaForm('KETERANGAN_BEROBAT')" role="button" tabindex="0"
+
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();bukaForm('KETERANGAN_BEROBAT')}">
+
+          <div class="icon-wrap">📋</div>
+
+          <h3>Keterangan Berobat</h3>
+
+          <p>Pengajuan keterangan bahwa pasien telah mendapatkan pelayanan.</p>
+
+          <div class="mini-tag">BUKTI PELAYANAN</div>
+
+          <div class="card-action">→</div>
+
+        </div>
+
+      </div>
+
+
+
+      <div id="formArea" class="form-area">
+
+        <div class="form-header">
+
+          <div class="form-title-line">
+
+            <div class="form-mark" id="formMark">🩺</div>
+
+            <div>
+
+              <h2 id="judulForm">Form Permohonan</h2>
+
+              <p id="subjudulForm">Silakan lengkapi data.</p>
+
+            </div>
+
+          </div>
+
+          <button type="button" class="secondary close-btn" onclick="tutupForm()">Tutup</button>
+
+        </div>
+
+
+
+        <form id="formPermohonan">
+
+          <input type="hidden" id="jenisPermohonan">
+
+
+
+          <div class="form-grid">
+
+
+
+            <!-- NAMA -->
+
+            <div class="field full">
+
+              <label for="nama">Nama</label>
+
+              <input type="text" id="nama" required placeholder="Masukkan nama lengkap" autocomplete="name">
+
+            </div>
+
+
+
+            <!-- UMUR -->
+
+            <div class="field" id="umurField">
+
+              <label for="umur">Umur</label>
+
+              <input type="number" id="umur" min="0" step="1" inputmode="numeric"
+
+                     required placeholder="Masukkan umur">
+
+            </div>
+
+
+
+            <!-- JENIS KELAMIN -->
+
+            <div class="field" id="jenisKelaminField">
+
+              <label for="jenisKelamin">Jenis Kelamin</label>
+
+              <select id="jenisKelamin" required>
+
+                <option value="">Pilih jenis kelamin</option>
+
+                <option value="Laki-laki">Laki-laki</option>
+
+                <option value="Perempuan">Perempuan</option>
+
+              </select>
+
+            </div>
+
+
+
+            <!-- TUJUAN SURAT SEHAT -->
+
+            <div class="field full" id="keperluanField">
+
+              <label for="keperluan">Perihal Tujuan Surat Sehat Untuk?</label>
+
+              <input type="text" id="keperluan" placeholder="Contoh: melamar pekerjaan">
+
+            </div>
+
+
+
+            <!-- PEKERJAAN / SEKOLAH UNTUK BEROBAT -->
+
+            <div class="field" id="pekerjaanField">
+
+              <label for="pekerjaanSekolah">Pekerjaan / Sekolah</label>
+
+              <input type="text" id="pekerjaanSekolah" placeholder="Contoh: Karyawan / SMK">
+
+            </div>
+
+
+
+            <!-- TANGGAL BEROBAT -->
+
+            <div class="field" id="tanggalBerobatField">
+
+              <label for="tanggalBerobat">Tanggal Berobat</label>
+
+              <input type="date" id="tanggalBerobat">
+
+            </div>
+
+
+
+            <!-- ALAMAT -->
+
+            <div class="field full">
+
+              <label for="alamat">Alamat Domisili</label>
+
+              <textarea id="alamat" required placeholder="Masukkan alamat domisili lengkap"></textarea>
+
+            </div>
+
+
+
+            <!-- ================= SURAT SEHAT ================= -->
+
+
+
+            <div class="field sehat-field" id="tinggiBadanField">
+
+              <label for="tinggiBadan">Tinggi Badan <span class="field-note">(* tanpa Cm)</span></label>
+
+              <input type="number" id="tinggiBadan" min="1" step="0.1" inputmode="decimal"
+
+                     placeholder="Contoh: 170">
+
+            </div>
+
+
+
+            <div class="field sehat-field" id="beratBadanField">
+
+              <label for="beratBadan">Berat Badan <span class="field-note">(* tanpa Kg)</span></label>
+
+              <input type="number" id="beratBadan" min="1" step="0.1" inputmode="decimal"
+
+                     placeholder="Contoh: 65">
+
+            </div>
+
+
+
+            <div class="field sehat-field" id="golonganDarahField">
+
+              <label for="golonganDarah">Golongan Darah</label>
+
+              <select id="golonganDarah">
+
+                <option value="">Pilih golongan darah</option>
+
+                <option value="A">A</option>
+
+                <option value="B">B</option>
+
+                <option value="AB">AB</option>
+
+                <option value="O">O</option>
+
+              </select>
+
+            </div>
+
+
+
+            <div class="field sehat-field" id="berkacamataField">
+
+              <label for="berkacamata">Berkacamata / Tidak Berkacamata</label>
+
+              <select id="berkacamata">
+
+                <option value="">Pilih</option>
+
+                <option value="Berkacamata">Berkacamata</option>
+
+                <option value="Tidak Berkacamata">Tidak Berkacamata</option>
+
+              </select>
+
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="actions">
+
+            <button type="submit" id="btnSubmit">Submit</button>
+
+            <button type="button" class="secondary" onclick="resetForm()">Reset</button>
+
+          </div>
+
+        </form>
+
+
+
+        <div id="message" class="message"></div>
+
+      </div>
+
+
+
+      <div class="footer-note">
+
+        UPTD Puskesmas Klampis Ngasem • Layanan pemohon
+
+      </div>
+
+    </section>
+
+
+
+  </div>
+
+
+
+  <script>
+
+    let jenisAktif = '';
+
+
+
+    function setFieldRequired(id, required) {
+
+      const el = document.getElementById(id);
+
+      if (el) el.required = required;
+
+    }
+
+
+
+    function setVisible(id, visible) {
+
+      const el = document.getElementById(id);
+
+      if (el) el.style.display = visible ? 'flex' : 'none';
+
+    }
+
+
+
+    function bukaForm(jenis) {
+
+      jenisAktif = jenis;
+
+      document.getElementById('jenisPermohonan').value = jenis;
+
+
+
+      const isSehat = jenis === 'SURAT_SEHAT';
+
+      const formArea = document.getElementById('formArea');
+
+      const formMark = document.getElementById('formMark');
+
+
+
+      document.getElementById('judulForm').innerText = isSehat
+
+        ? 'SURAT KETERANGAN SEHAT'
+
+        : 'KETERANGAN BEROBAT';
+
+
+
+      document.getElementById('subjudulForm').innerText = isSehat
+
+        ? 'Silakan masukkan identitas anda kemudian klik submit.'
+
+        : 'Silakan isi data pasien dan tanggal berobat.';
+
+
+
+      formMark.innerText = isSehat ? '🩺' : '📋';
+
+
+
+      // Tema form sesuai jenis layanan
+
+      formArea.classList.remove('theme-sehat','theme-berobat');
+
+      formArea.classList.add(isSehat ? 'theme-sehat' : 'theme-berobat');
+
+
+
+      // Form khusus SURAT SEHAT sesuai rancangan sebelumnya.
+
+      setVisible('keperluanField', isSehat);
+
+      setVisible('pekerjaanField', !isSehat);
+
+      setVisible('tanggalBerobatField', !isSehat);
+
+
+
+      setVisible('tinggiBadanField', isSehat);
+
+      setVisible('beratBadanField', isSehat);
+
+      setVisible('golonganDarahField', isSehat);
+
+      setVisible('berkacamataField', isSehat);
+
+
+
+      setFieldRequired('keperluan', isSehat);
+
+      setFieldRequired('pekerjaanSekolah', !isSehat);
+
+      setFieldRequired('tanggalBerobat', !isSehat);
+
+
+
+      setFieldRequired('tinggiBadan', isSehat);
+
+      setFieldRequired('beratBadan', isSehat);
+
+      setFieldRequired('golonganDarah', isSehat);
+
+      setFieldRequired('berkacamata', isSehat);
+
+
+
+      formArea.style.display = 'block';
+
+
+
+      requestAnimationFrame(() => {
+
+        formArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      });
+
+    }
+
+
+
+    function tutupForm() {
+
+      document.getElementById('formArea').style.display = 'none';
+
+    }
+
+
+
+    function resetForm() {
+
+      document.getElementById('formPermohonan').reset();
+
+      document.getElementById('jenisPermohonan').value = jenisAktif;
+
+      document.getElementById('message').style.display = 'none';
+
+    }
+
+
+
+    document.getElementById('formPermohonan').addEventListener('submit', function(e) {
+
+      e.preventDefault();
+
+
+
+      const formArea = document.getElementById('formArea');
+
+      const btn = document.getElementById('btnSubmit');
+
+
+
+      const data = {
+
+        jenisPermohonan: jenisAktif,
+
+        nama: document.getElementById('nama').value.trim(),
+
+        jenisKelamin: document.getElementById('jenisKelamin').value,
+
+        umur: document.getElementById('umur').value.trim(),
+
+        pekerjaanSekolah: document.getElementById('pekerjaanSekolah').value.trim(),
+
+        keperluan: document.getElementById('keperluan').value.trim(),
+
+        alamat: document.getElementById('alamat').value.trim(),
+
+
+
+        // Data Surat Keterangan Sehat
+
+        tinggiBadan: document.getElementById('tinggiBadan').value.trim(),
+
+        beratBadan: document.getElementById('beratBadan').value.trim(),
+
+        golonganDarah: document.getElementById('golonganDarah').value,
+
+        berkacamata: document.getElementById('berkacamata').value,
+
+
+
+        tanggalBerobat: document.getElementById('tanggalBerobat').value
+
+      };
+
+
+
+      btn.innerText = 'Mengirim...';
+
+      formArea.classList.add('loading');
+
+
+
+      google.script.run
+
+        .withSuccessHandler(function(result) {
+
+          formArea.classList.remove('loading');
+
+          btn.innerText = 'Submit';
+
+
+
+          tampilMessage(
+
+            'success',
+
+            '<b>Permohonan berhasil dikirim.</b><br><br>' +
+
+            'ID Permohonan:<br><b>' + escapeHtml(result.id) + '</b><br><br>' +
+
+            'Silakan menunggu proses petugas.'
+
+          );
+
+
+
+          document.getElementById('formPermohonan').reset();
+
+          document.getElementById('jenisPermohonan').value = jenisAktif;
+
+        })
+
+        .withFailureHandler(function(error) {
+
+          formArea.classList.remove('loading');
+
+          btn.innerText = 'Submit';
+
+
+
+          tampilMessage(
+
+            'error',
+
+            escapeHtml(error.message || 'Terjadi kesalahan.')
+
+          );
+
+        })
+
+        .submitPermohonan(data);
+
+    });
+
+
+
+    function tampilMessage(type, text) {
+
+      const el = document.getElementById('message');
+
+      el.className = 'message ' + type;
+
+      el.innerHTML = text;
+
+      el.style.display = 'block';
+
+      el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    }
+
+
+
+    function escapeHtml(value) {
+
+      return String(value || '')
+
+        .replace(/&/g, '&amp;')
+
+        .replace(/</g, '&lt;')
+
+        .replace(/>/g, '&gt;')
+
+        .replace(/"/g, '&quot;')
+
+        .replace(/'/g, '&#039;');
+
+    }
+
+  </script>
+
+</body>
+
+</html>
